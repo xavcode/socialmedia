@@ -18,13 +18,13 @@ if (!GITHUB_CLIENT_ID || !GITHUB_CLIENT_SECRET){
       clientSecret: GITHUB_CLIENT_SECRET
     })
   ],
-  // callbacks: {
-  //   //usualy not needed, just for fixing a bug with nextauth
-  //   async session( {session, user}:any){
-  //     if (session && user){
-  //       session.user.id = user.id
-  //     }
-  //   return session
-  //   }
-  // }
+  callbacks: {
+    //usualy not needed, just for fixing a bug with nextauth
+    async session( {session, user}:any){
+      if (session && user){
+        session.user.id = user.id
+      }
+    return session
+    }
+  }
 })

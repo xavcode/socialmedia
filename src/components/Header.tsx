@@ -22,7 +22,6 @@ export default function Header() {
       <NavbarContent justify="end">
         <HeaderAuth />
       </NavbarContent>
-
     </Navbar>
   )
 }
